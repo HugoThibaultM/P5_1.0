@@ -29,12 +29,15 @@ input CreateCommentInput {
 
 input UpdateCommentInput {
     text: String
+    author: ID
+    post: ID
 }
 
 type User {
   id: ID!
   name: String!
   email: String!
+  password: String!
   posts: [Post!]!
   comments: [Comment!]!
   likedPosts: [Post!]!
